@@ -4,13 +4,14 @@ import pandas as pd
 import streamlit as st
 
 
+
+
 # df = pd.DataFrame({'Month':['Jan','Feb','Mar'],'Fruits':['Apple','Mango','Banana'],'Amount':[20,30,50]})
 # st.write('Monthly data for fruits:')
 # st.write(df)
 @st.cache_data #this cache skips the delay and store the df result in a ram in the form of cacheqw
 def get_data():
     df = pd.DataFrame({'Month':['Jan','Feb','Mar'],'Fruits':['Apple','Mango','Ban'],'Amount':[20,30,50]})
-    time.sleep(2)
     return df
 df = get_data()
 col1,col2 = st.columns(2)
